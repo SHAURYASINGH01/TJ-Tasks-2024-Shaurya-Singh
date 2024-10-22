@@ -3,10 +3,8 @@ public class Q6 {
       long max = Math.max(Math.abs(x), Math.abs(y));
         long level = max;
 
-        // Calculate the offset from the corner of the current level
         long offset = max - 1;
 
-        // Determine the quadrant
         int quadrant = 0;
         if (x == -offset && y <= offset) {
             quadrant = 1; // Top left corner
@@ -17,8 +15,6 @@ public class Q6 {
         } else if (y == -offset && x <= offset) {
             quadrant = 4; // Bottom left corner
         }
-
-        // Calculate the value based on the quadrant and offset
         switch (quadrant) {
             case 1:
                 return level * level - offset + y;
@@ -29,7 +25,7 @@ public class Q6 {
             case 4:
                 return level * level - offset + x;
             default:
-                return 0; // Should never happen
+                return 0;
         }
   }
   public static void main(String[] args) {
