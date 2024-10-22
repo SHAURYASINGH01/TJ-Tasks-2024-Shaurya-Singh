@@ -8,7 +8,6 @@ public class Q1 {
         for (int i = 0; i < n; i++) {
             List<Integer> row = new ArrayList<>();
             for (int j = 0; j <= i; j++) {
-                // The first and last element of each row is always 1
                 if (j == 0 || j == i) {
                     row.add(1);
                 } else {
@@ -20,7 +19,6 @@ public class Q1 {
             pascalTriangle.add(row);
         }
 
-        // Print the result
         System.out.println("The first " + n + " rows of Pascal's Triangle: " + pascalTriangle);
     }
 
